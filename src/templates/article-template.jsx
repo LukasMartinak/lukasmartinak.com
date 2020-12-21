@@ -35,22 +35,16 @@ export const pageQuery = graphql`
         email {
           value
         }
-        github {
-          value
-        }
         name {
           value
         }
         rss {
           value
         }
-        telegram {
+        linkedin {
           value
         }
         twitter {
-          value
-        }
-        vk {
           value
         }
         avatar_image {
