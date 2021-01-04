@@ -14,7 +14,8 @@ class Article extends React.Component {
     const slug = `/articles/${_.get(this.props, 'data.elements.slug.value', 'N/A')}`
     const itemId = _.get(this.props, 'data.system.id')
     const externalUrl = _.get(this.props, 'data.elements.external_url.value', '')
-    const articleUrl = !externalUrl ? slug : externalUrl;
+    const articleUrl = !externalUrl ? slug : externalUrl
+    const linkTarget = !externalUrl ? "_self" : "_blank"
 
     return (
       <div className="article" data-kontent-item-id={itemId}>
@@ -34,12 +35,12 @@ class Article extends React.Component {
           </span>
         </div>
         <h2 className="article__title" data-kontent-element-codename="title">
-          <Link className="article__title-link" to={articleUrl} target="_blank">
+          <Link className="article__title-link" to={articleUrl} target={linkTarget}>
             {title}
           </Link>
         </h2>
         <p className="article__description"  data-kontent-element-codename="description">{description}</p>
-        <Link className="article__readmore" to={articleUrl} target="_blank">
+        <Link className="article__readmore" to={articleUrl} target={linkTarget}>
           Read
         </Link>
       </div>
