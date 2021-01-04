@@ -63,6 +63,9 @@ export const pageQuery = graphql`
           slug {
             value
           }
+          external_url {
+            value
+          }
           tags {
             value {
               ... on kontent_item_tag {

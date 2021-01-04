@@ -34,12 +34,12 @@ class Article extends React.Component {
           </span>
         </div>
         <h2 className="article__title" data-kontent-element-codename="title">
-          <Link className="article__title-link" to={articleUrl}>
+          <Link className="article__title-link" to={articleUrl} target="_blank">
             {title}
           </Link>
         </h2>
         <p className="article__description"  data-kontent-element-codename="description">{description}</p>
-        <Link className="article__readmore" to={articleUrl}>
+        <Link className="article__readmore" to={articleUrl} target="_blank">
           Read
         </Link>
       </div>
