@@ -13,6 +13,8 @@ class Article extends React.Component {
     const description = _.get(this.props, 'data.elements.description.value', 'N/A')
     const slug = `/articles/${_.get(this.props, 'data.elements.slug.value', 'N/A')}`
     const itemId = _.get(this.props, 'data.system.id')
+    const externalUrl = _.get(this.props, 'data.elements.external_url.value', '')
+    const articleUrl = !externalUrl ? slug : externalUrl;
 
     return (
       <div className="article" data-kontent-item-id={itemId}>
@@ -32,12 +34,12 @@ class Article extends React.Component {
           </span>
         </div>
         <h2 className="article__title" data-kontent-element-codename="title">
-          <Link className="article__title-link" to={slug}>
+          <Link className="article__title-link" to={articleUrl}>
             {title}
           </Link>
         </h2>
         <p className="article__description"  data-kontent-element-codename="description">{description}</p>
-        <Link className="article__readmore" to={slug}>
+        <Link className="article__readmore" to={articleUrl}>
           Read
         </Link>
       </div>
