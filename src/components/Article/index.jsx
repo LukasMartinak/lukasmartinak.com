@@ -23,9 +23,14 @@ class Article extends React.Component {
     if (!externalUrl) {
       linkMarkup = <Link className="article__readmore" to={slug}>Read</Link>
     } else {
-      var a = document.createElement('a');
-      a.href = externalUrl;
-      linkMarkup = <OutboundLink href={externalUrl} target="_blank">Read on {a.hostname}</OutboundLink>
+      var externalDomain = "";
+      
+      var match = externalUrl.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+      if (match != null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
+        externalDomain = match[2];
+      }
+
+      linkMarkup = <OutboundLink href={externalUrl} target="_blank">Read on {externalDomain}</OutboundLink>
     }
 
     return (
