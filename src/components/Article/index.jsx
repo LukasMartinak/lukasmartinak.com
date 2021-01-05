@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import moment from 'moment'
 import * as _ from 'lodash'
 import './style.scss'
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 class Article extends React.Component {
   render() {
@@ -16,6 +17,16 @@ class Article extends React.Component {
     const externalUrl = _.get(this.props, 'data.elements.external_url.value', '')
     const articleUrl = !externalUrl ? slug : externalUrl
     const linkTarget = !externalUrl ? "_self" : "_blank"
+
+    let linkMarkup;
+
+    if (!externalUrl) {
+      linkMarkup = <Link className="article__readmore" to={slug}>Read</Link>
+    } else {
+      var a = document.createElement('a');
+      a.href = externalUrl;
+      linkMarkup = <OutboundLink href={externalUrl} target="_blank">Read on {a.hostname}</OutboundLink>
+    }
 
     return (
       <div className="article" data-kontent-item-id={itemId}>
@@ -40,9 +51,7 @@ class Article extends React.Component {
           </Link>
         </h2>
         <p className="article__description"  data-kontent-element-codename="description">{description}</p>
-        <Link className="article__readmore" to={articleUrl} target={linkTarget}>
-          Read
-        </Link>
+        {linkMarkup}
       </div>
     )
   }
