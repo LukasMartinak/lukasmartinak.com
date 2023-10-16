@@ -45,7 +45,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "gatsby": "^2.24.53",
+    "gatsby": "^5.12.6",
     "gatsby-cli": "^2.12.65",
     "gatsby-plugin-catch-links": "^2.0.4",
     "gatsby-plugin-google-analytics": "^2.0.6",
@@ -55,10 +55,10 @@
     "gatsby-plugin-sharp": "^2.6.39",
     "gatsby-plugin-sitemap": "^2.0.1",
     "lodash": "^4.17.19",
-    "lost": "^8.2.0",
+    "lost": "^8.3.1",
     "ncp": "^2.0.0",
     "node-sass": "^4.14.1",
-    "postcss-pxtorem": "^4.0.1",
+    "postcss-pxtorem": "^6.0.0",
     "prettier": "^1.10.2",
     "prismjs": "^1.15.0"
   }
