@@ -52,7 +52,7 @@
     "gatsby-plugin-google-fonts": "latest",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
-    "gatsby-plugin-sharp": "^2.6.39",
+    "gatsby-plugin-sharp": "^5.12.1",
     "gatsby-plugin-sitemap": "^2.0.1",
     "lodash": "^4.17.19",
     "lost": "^8.2.0",
