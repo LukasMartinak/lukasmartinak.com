@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "@kentico/gatsby-kontent-components": "^6.0.0",
-    "@kentico/gatsby-source-kontent": "6.1.0",
+    "@kentico/gatsby-source-kontent": "6.3.5",
     "@kentico/kontent-smart-link": "0.0.3",
     "gatsby-plugin-google-gtag": "^2.5.0",
     "react": "^16.8.0",
@@ -45,7 +45,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "gatsby": "^2.24.53",
+    "gatsby": "^2.32.13",
     "gatsby-cli": "^2.12.65",
     "gatsby-plugin-catch-links": "^2.0.4",
     "gatsby-plugin-google-analytics": "^2.0.6",
